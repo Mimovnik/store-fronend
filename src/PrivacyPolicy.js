@@ -6,6 +6,7 @@ const PrivacyPolicy = () => {
         <br />
         Polityka COOKIES
         <br />
+        <br />
         Sklep nie zbiera w sposób automatyczny żadnych informacji, z wyjątkiem
         informacji zawartych w plikach cookies.
         <br />
