@@ -1,7 +1,7 @@
 import ProductList from "./ProductList";
 import useFetch from "./useFetch";
 
-const Products = () => {
+const ProductsPage = () => {
   const {
     data: products,
     isLoading,
@@ -23,4 +23,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ProductsPage;

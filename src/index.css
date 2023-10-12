@@ -52,3 +52,18 @@
   color: #11689b;
   margin-bottom: 8px;
 }
+
+/* size-variants / list */
+
+.size-variant {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+
+.size-variant h2{
+  font-size: 20px;
+  color: #11689b;
+  margin-bottom: 8px;
+}
