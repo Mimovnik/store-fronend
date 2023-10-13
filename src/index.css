@@ -91,3 +91,36 @@
   color: #11689b;
   margin-bottom: 8px;
 }
+
+/* product-creation form */
+
+.product-creation {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.product-creation label {
+  text-align: left;
+  display: block;
+}
+.product-creation h2 {
+  font-size: 20px;
+  color: #11689b;
+  margin-bottom: 30px;
+}
+.product-creation input, .product-creation textarea, .product-creation select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.product-creation button {
+  background: #11689b;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
