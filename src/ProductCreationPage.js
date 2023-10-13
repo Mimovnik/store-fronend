@@ -9,6 +9,20 @@ const ProductCreationPage = () => {
   const [weight, setWeight] = useState(0);
   const [sizeVariants, setSizeVariants] = useState([]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const product = {
+      name: name,
+      description: description,
+      price: price,
+      weightInGrams: weight,
+      sizeVariants: sizeVariants,
+    };
+
+    console.log(JSON.stringify(product));
+  };
+
   return (
     <div className="product-creation">
       <div className="links">
@@ -16,7 +30,7 @@ const ProductCreationPage = () => {
       </div>
       <div className="creation-form">
         <h2>Create new product</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Name:</label>
           <input
             type="text"

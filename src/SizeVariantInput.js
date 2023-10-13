@@ -46,6 +46,9 @@ const SizeVariantInput = (props) => {
                       quantity: e.target.value,
                     };
                   }
+                  return {
+                    ...sizeVariant,
+                  };
                 })
               )
             }
@@ -67,6 +70,9 @@ const SizeVariantInput = (props) => {
                       identifier: e.target.value,
                     };
                   }
+                  return {
+                    ...sizeVariant,
+                  };
                 })
               )
             }
