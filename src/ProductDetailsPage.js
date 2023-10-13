@@ -12,7 +12,9 @@ const ProductDetailsPage = () => {
 
   return (
     <div className="product-details">
-      <button onClick={() => window.history.back()}>Go back</button>
+      <div className="go-back" onClick={() => window.history.back()}>
+        Go back to products
+      </div>
       {error && <div>{error}</div>}
       {isLoading && <div>Loading...</div>}
       {product && <ProductDetails product={product} />}
