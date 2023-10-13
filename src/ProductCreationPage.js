@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import SizeVariantInput from "./SizeVariantInput";
 
 const ProductCreationPage = () => {
   const [name, setName] = useState("");
@@ -44,83 +45,42 @@ const ProductCreationPage = () => {
             onChange={(e) => setWeight(e.target.value)}
           />
           <label>Sizes:</label>
-          <div className="size-variant">
-            <label>Universal</label>
-            <input
-              type="checkbox"
-              value={sizeVariants.find(
-                (sizeVariant) => sizeVariant.size === "Universal"
-              )}
-              onChange={(e) => {
-                if (e.target.checked) {
-                  setSizeVariants([
-                    ...sizeVariants,
-                    {
-                      size: "Universal",
-                      quantity: 0,
-                      identifier: name + "_Universal",
-                    },
-                  ]);
-                } else {
-                  setSizeVariants(
-                    sizeVariants.filter(
-                      (sizeVariant) => sizeVariant.size !== "Universal"
-                    )
-                  );
-                }
-              }}
-            />
-            {sizeVariants.find(
-              (sizeVariant) => sizeVariant.size === "Universal"
-            ) && (
-              <div>
-                <label>Quantity</label>
-                <input
-                  type="text"
-                  required
-                  value={
-                    sizeVariants.find(
-                      (sizeVariant) => sizeVariant.size === "Universal"
-                    ).quantity
-                  }
-                  onChange={(e) =>
-                    setSizeVariants(
-                      sizeVariants.map((sizeVariant) => {
-                        if (sizeVariant.size === "Universal") {
-                          return {
-                            ...sizeVariant,
-                            quantity: e.target.value,
-                          };
-                        }
-                      })
-                    )
-                  }
-                />
-                <label>Identifier</label>
-                <input
-                  type="text"
-                  required
-                  value={
-                    sizeVariants.find(
-                      (sizeVariant) => sizeVariant.size === "Universal"
-                    ).identifier
-                  }
-                  onChange={(e) =>
-                    setSizeVariants(
-                      sizeVariants.map((sizeVariant) => {
-                        if (sizeVariant.size === "Universal") {
-                          return {
-                            ...sizeVariant,
-                            identifier: e.target.value,
-                          };
-                        }
-                      })
-                    )
-                  }
-                />
-              </div>
-            )}
-          </div>
+          <SizeVariantInput
+            size="Universal"
+            productName={name}
+            sizeVariants={sizeVariants}
+            setSizeVariants={setSizeVariants}
+          />
+          <SizeVariantInput
+            size="XS"
+            productName={name}
+            sizeVariants={sizeVariants}
+            setSizeVariants={setSizeVariants}
+          />
+          <SizeVariantInput
+            size="S"
+            productName={name}
+            sizeVariants={sizeVariants}
+            setSizeVariants={setSizeVariants}
+          />
+          <SizeVariantInput
+            size="M"
+            productName={name}
+            sizeVariants={sizeVariants}
+            setSizeVariants={setSizeVariants}
+          />
+          <SizeVariantInput
+            size="L"
+            productName={name}
+            sizeVariants={sizeVariants}
+            setSizeVariants={setSizeVariants}
+          />
+          <SizeVariantInput
+            size="XL"
+            productName={name}
+            sizeVariants={sizeVariants}
+            setSizeVariants={setSizeVariants}
+          />
           <button>Create</button>
         </form>
       </div>
