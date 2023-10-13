@@ -4,6 +4,7 @@ import PrivacyPolicyPage from "./PrivacyPolicyPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductsPage from "./ProductsPage";
 import ProductDetailsPage from "./ProductDetailsPage";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/privacy-policy" Component={PrivacyPolicyPage} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );
