@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProductList from "./ProductList";
 import useFetch from "./useFetch";
 
@@ -10,6 +11,9 @@ const ProductsPage = () => {
 
   return (
     <div className="products">
+      <div className="links">
+        <Link to="/products/create">Create new product</Link>
+      </div>
       {error && <div>{error}</div>}
       {isLoading && <div>Loading...</div>}
       {products && <ProductList products={products} title="All products" />}

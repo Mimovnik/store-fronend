@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductsPage from "./ProductsPage";
 import ProductDetailsPage from "./ProductDetailsPage";
 import Footer from "./Footer";
+import ProductCreationPage from "./ProductCreationPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" Component={Home} />
             <Route path="/products" Component={ProductsPage} />
             <Route path="/products/:id" Component={ProductDetailsPage} />
+            <Route path="/products/create" Component={ProductCreationPage} />
             <Route path="/privacy-policy" Component={PrivacyPolicyPage} />
           </Routes>
         </div>
